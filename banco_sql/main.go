@@ -1,8 +1,8 @@
 package main
 
 import (
-	"banco_sql/manipulador"
-	"banco_sql/repo"
+	"github.com/ricsanber40/cursodego/banco_sql/manipulador"
+	"github.com/ricsanber40/cursodego/banco_sql/repo"
 	"fmt"
 	"net/http"
 )

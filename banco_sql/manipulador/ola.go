@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jeffprestes/cursodego/servidor_web/model"
+	"github.com/ricsanber40/cursodego/servidor_web/model"
 )
 
 //Ola é o manipulador da requisição a rota /ola

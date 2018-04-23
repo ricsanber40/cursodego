@@ -3,7 +3,7 @@ package manipulador
 import (
 	"fmt"
 	"net/http"
-	"servidor_web/model"
+	"github.com/ricsanber40/cursodego/servidor_web/model"
 	"time"
 )
 

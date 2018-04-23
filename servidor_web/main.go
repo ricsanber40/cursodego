@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"servidor_web/manipulador"
+	"github.com/ricsanber40/cursodego/servidor_web/manipulador"
 )
 
 func main() {

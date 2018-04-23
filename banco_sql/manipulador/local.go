@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jeffprestes/cursodego/banco_sql/model"
-	"github.com/jeffprestes/cursodego/banco_sql/repo"
+	"github.com/ricsanber40/cursodego/banco_sql/model"
+	"github.com/ricsanber40/cursodego/banco_sql/repo"
 )
 
 //Local é o manipulador da requisição de rota /local/
