@@ -3,8 +3,9 @@ package manipulador
 import (
 	"fmt"
 	"net/http"
-	"github.com/ricsanber40/cursodego/servidor_web/model"
 	"time"
+
+	"github.com/ricsanber40/cursodego/servidor_web/model"
 )
 
 //Ola é o manipulador da requisição a rota /ola

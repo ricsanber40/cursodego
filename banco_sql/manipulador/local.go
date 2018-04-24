@@ -28,13 +28,14 @@ func Local(w http.ResponseWriter, r *http.Request) {
 		log.Println("[Local] Erro na conexao: ", err.Error())
 		return
 	}
-	sql := "select country, city, telcode from place where telcode = ?"
+	sql := "select country, city, telcode from place where telcode = $1"
 	linha, err := db.Queryx(sql, codigoTelefone)
 	if err != nil {
 		http.Error(w, "Não foi possível pesquisar esse numero.", http.StatusInternalServerError)
 		fmt.Println("[local] nao foi possível executar a query: ", sql, " Erro: ", err.Error())
 		return
 	}
+
 	for linha.Next() {
 		err = linha.StructScan(&local)
 		if err != nil {
@@ -47,7 +48,7 @@ func Local(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Houve um erro na renderização da página.", http.StatusInternalServerError)
 		fmt.Println("[local] Erro na execucao do modelo: ", err.Error())
 	}
-	sql = "insert into logquery (daterequest) values (?)"
+	sql = "insert into logquery (daterequest) values ($1)"
 	resultado, err := db.Exec(sql, time.Now().Format("02/01/2006 15:04:05"))
 	if err != nil {
 		fmt.Println("[local] Erro na inclusao do log: ", sql, " - ", err.Error())

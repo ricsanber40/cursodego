@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/ricsanber40/cursodego/banco_sql/manipulador"
-	"github.com/ricsanber40/cursodego/banco_sql/repo"
 	"fmt"
 	"net/http"
+
+	"github.com/ricsanber40/cursodego/banco_sql/manipulador"
+	"github.com/ricsanber40/cursodego/banco_sql/repo"
 )
 
 func init() {

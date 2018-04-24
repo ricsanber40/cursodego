@@ -5,9 +5,9 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	/*
-		github.com/go-sql-driver/mysql não é usado diretamente pela aplicação
+		github.com/lib/pq não é usado diretamente pela aplicação
 	*/
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 //variavel singleton que armazena a conexao
@@ -16,7 +16,7 @@ var db *sqlx.DB
 //AbreConexaoComBancoDeDadosSQL funcao que abre a conexao com o banco MYSQL
 func AbreConexaoComBancoDeDadosSQL() (db *sqlx.DB, err error) {
 	err = nil
-	db, err = sqlx.Open("mysql", "root@tcp(localhost:3306)/cursodego?parseTime=true")
+	db, err = sqlx.Open("postgres", "host=localhost dbname=cursodego user=postgres password=postgres sslmode=disable")
 	if err != nil {
 		log.Println("[AbreConexaoComBancoDeDadosSQL] Erro na conexao: ", err.Error())
 		return
