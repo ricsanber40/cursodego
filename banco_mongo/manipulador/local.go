@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jeffprestes/cursodego/banco_mongo/model"
-	"github.com/jeffprestes/cursodego/banco_mongo/repo"
+	"github.com/ricsanber40/cursodego/banco_mongo/model"
+	"github.com/ricsanber40/cursodego/banco_mongo/repo"
 )
 
 //Local é o manipulador da requisição de rota /local/
