@@ -1,0 +1,8 @@
+db:
+  src:
+    name: "teste1"
+    type: "postgresql"
+    host: "${DB_HOST_SRC}"
+  dst:
+    name: "teste2"
+    type: "postgresql"
